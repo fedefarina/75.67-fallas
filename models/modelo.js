@@ -32,80 +32,93 @@ var carreras =[
 
 var preguntas = [
     {
-        pregunta : "Capacidad lógico/matemático",
-        descripcion: "Capacidad para utilizar los números de una manera efectiva y de razonar adecuadamente empleando el pensamiento lógico, siendo esta última capacidad  un proceso cognitivo que conlleva la  selección de una respuesta de adaptación al medio, basada en análisis y comparación de los diversos elementos que intervienen y forman un determinado contexto. El experto evaluará la capacidad del jóven para resolver problemas de lógica-matemática.",
+        pregunta: "Precipitación pluvial ocurrida entre R3-R5.5",
+        descripcion: "Se relaciona con la frecuencia y duración del mojado foliar. Germinación y diseminación de esporas. Es uno de los ítems de mayor importancia. Esta basada en la cantidad de precipitaciones que se acumulan desde R3 en adelante",
         respuestas : [
-            "Dificultad excesiva en ejercicios simples",
-            "Dificultad media con resolución del ejercicio satisfactoria.",
-            "Razonamiento convencional en tiempo medio.",
-            "Resolución satisfactoria en tiempo adecuado",
-            "Resolución perfecta en tiempo menor a la media"
+            "Menos de 50 mm",
+            "50 mm o más",
         ]
     },
     {
-        pregunta : "Flexibilidad",
-        descripcion: "La teoría de flexibilidad cognitiva enfatiza la posibilidad del traslado de conocimiento y habilidades más allá de su situación de aprendizaje inicial debido a que se extrapola la información anterior y se observa desde varias perspectivas novedosas, logrando utilizar el conocimiento o información en momentos posteriores. Los tests relacionados con esta teoría, tratan de cuantificar la capacidad para concentrarse atendiendo a la vez a varias condiciones cambiantes en el entorno.",
+        pregunta: "Precipitación pluvial ocurrida",
+        descripcion: "Si el 75 % de la misma correspondió a lluvias de 7 mm o más Se fundamenta en que las lluvias que superan el umbral de 7 mm (excluyen lloviznas y lluvias ligeras) podrían asegurar una energía mínima para producir dispersión horizontal y vertical de esporas, muy requerido por los picnidios de S. glycines, Phomopsis, y también para asegurar el mojado para la infección de conidios de Cercospora.",
         respuestas : [
-            "Miedo a las situaciones que no puede controlar",
-            "Reticencia al cambio con aceptación si es inminente",
-            "Indiferencia",
-            "Adaptación adecuada a cambios del entorno",
-            "Gran adaptabilidad"
+            "Menos de 50 mm",
+            "Entre 50 y 100 mm",
+            "Entre 100 y 150 mm",
+            "Entre 150 y 200 mm",
+            "Más de 200 mm"
         ]
     },
     {
-        pregunta : "Pensamiento lateral/Creatividad",
-        descripcion: "El pensamiento vertical (lógico, analítico, convergente y deductivo) utiliza la información por su valor intrínseco, para llegar eventualmente a una solución dentro de los modelos tradicionales existentes. En cambio, el pensamiento lateral (creativo, imaginativo, divergente e inductivo) no utiliza la información en sí misma sino como un medio para provocar una disgregación de los modelos y su reestructuración perspicaz en ideas creativas. En este <a href=\"pensamientoLateral\">enlace</a> se presenta un set de preguntas para evaluar la estructuración de los razonamientos del jóven entrevistado",
+        pregunta: "Rotación de cultivos",
+        descripcion: "Historia agronómica del lote con especies no hospedantes de patógenos de soja. Bajo rotación habrá menos fuente de inóculo.",
         respuestas : [
-            "1-4 respuestas correctas",
-            "5-8 respuestas correctas",
-            "9-12 respuestas correctas",
-            "13-16 respuestas correctas",
-            "17-20 respuestas correctas"
+            "Se sembró soja en la siembra anterior",
+            "Se sembró trigo, maíz o sorgo en la siembra anterior "
         ]
     },
     {
-        pregunta : "Interés por la tecnología",
-        descripcion: "En esta sección, se intenta conocer los interéses del jóven en materia tecnológica, debido a que si existe una pasión por los aparatos eléctricos/electrónicos, el querer entender como funcionan para satisfacer la curiosidad propia, puede resultar determinante en la elección de una carrera que cumpla con las expectativas del jóven interesado.",
+        pregunta: "Sistema de labranza",
+        descripcion: "Las EFC son en causadas en su mayoría por agentes necrotróficos que sobreviven en rastrojo, de allí su valoración.",
         respuestas : [
-            "Reticencia alta",
-            "Reticencia media",
-            "Usuario constante por obligación",
-            "Usuario constante por voluntad propia",
-            "Conocimiento actualizado hacia las últimas novedades"
+            "Labranza cero o siembra directa",
+            "Otro sistema distinto a labranza cero"
         ]
     },
     {
-        pregunta : "Test de Wason",
-        descripcion: "El Test de Wason consiste en el siguiente ejercicio deductivo: A usted le muestran un grupo de cuatro cartas en una mesa. Cada una tiene un úmero de un lado y un color del otro. Las caras visibles de las cartas muestran 3, 8, rojo y marrón. ¿A qué dos cartas debería dar vuelta para omprobar la veracidad de la proposición que si una carta muestra un número par por un lado, entonces la cara opuesta muestra un color primario?. Se evaluará el razonamiento y análisis que realiza el paciente para resolver el problema, permitiendo determinar su capacidad deductiva.",
+        pregunta: "Presencia de EFC en el cultivo de soja del año anterior (rastrojo)",
+        descripcion: "Es conveniente conocer los antecedentes sanitarios del lote si es que proviene de soja e ira nuevamente a soja. Es una forma indirecta de estimar la fuente de inóculo proveniente del rastrojo anterior. Se espera que si existieron síntomas el año anterior sus agentes causales estén sobreviviendo en los rastrojos presentes en el mismo lote.",
         respuestas : [
-            "No comprende la consigna",
-            "Tiempo elevado con necesidad de ayuda",
-            "Razonamiento parcialmente correcto sin llegar al resultado",
-            "Razonamiento y resultados correctos",
-            "Razonamiento y resultados correctos en tiempo óptimo"
+            "No hubo siembra de soja en el año anterior",
+            "Hubo siembra en el año anterior y no hubo presencia de EFC",
+            "Hubo siembra en el año anterior y hubo presencia de EFC"
         ]
     },
     {
-        pregunta : "Capacidad de análisis",
-        descripcion: "Tener capacidad para el análisis y el razonamiento supone mostrar destreza a la hora de extraer conclusiones sobre datos acontecidos, ser capaz de fragmentar y descomponer procesos complejos en sus componentes generales y específicos y de definir todas las tareas y estructuras necesarias para la resolución de problemas. El experto aplicando su conocimiento y herramientas deberá evaluar la capacidad de análisis del paciente.",
+        pregunta: "Calidad sanitaria de la semilla",
+        descripcion: "Se considera los patógenos asociados a la semilla y transmitidos a la plántula; en áreas bajo rotación de cultivos. Si no se hace tratamiento de semilla la probabilidad de introducir o aumentar los patógenos causantes de EFC es mayor.",
         respuestas : [
-            "Bajo",
-            "El análisis presenta falencias",
-            "Medio",
-            "Distinguir claramente las conexiones y dependencias",
-            "Alto nivel detalle de la situación"
+            "Presencia de 3 o más agentes patógenos",
+            "Presencia de 1 o 2 agentes patógenos",
+            "No se ha realizado análisis de calidad sanitaria o se desconoce la misma",
         ]
     },
     {
-        pregunta : "Afinidad con la matemática",
-        descripcion: "La matemática, apodada \"La madre de las Ciencias\", establece un lenguaje común entre todas las carreras que analizamos en este software, algunas la emplean en mayor, y otras en menor medida. Varios matemáticos a lo largo de la historia han comparado la majestuosidad de dicha disciplina con la música, la pintura y otras artes. La destreza y más aún, el sentimiento del jóven para con la misma, es un factor determinante a la hora de elegir una carrera.",
+        pregunta: "Ciclo del cultivar",
+        descripcion: "Cuanto más largo sea el ciclo, mayor su probabilidad para enfermarse",
         respuestas : [
-            "Intenta evitarla debido a que le cuesta comprenderla",
-            "Intenta evitarla pero no tiene problema en lidiar con ella",
-            "Indiferencia",
-            "Facilidad pero falta de interés",
-            "Facilidad y apasionado por la misma"
+            "Duración de menos de 6 meses",
+            "Duración de 6 meses",
+            "Duración de 7 meses",
+            "Duración de 8 meses",
+            "Duración de más de 8 meses"
+        ]
+    },
+    {
+        pregunta : "Producción destinada a semilla (destino de la producción)",
+        descripcion: "Si el lote es destinado a semilla, su manejo debe jerarquizarse en miras del control químico Esta práctica merece decisiones técnicas que tiendan a mejorar la calidad sanitaria de la semilla a cosechar.",
+        respuestas : [
+            "Producción destinada a semilla",
+            "Producción destinada a consumo humano"
+        ]
+    },
+    {
+        pregunta : "Potencial productivo del lote",
+        descripcion: "Tomar como base la productividad media del productor en años sin adversidades climáticas u otro factor anormal.",
+        respuestas : [
+            "Alto",
+            "Moderado",
+            "Bajo"
+        ]
+    },
+    {
+        pregunta: "Presencia actual de síntomas en el lote",
+        descripcion: "Considerar este item al momento de la calificación. Algunas veces pueden observarse síntomas de Septoria, Colletotrichum (mancha marrón, antracnosisi) o Cercospora (tizón morado) más tempranamente que pre-anuncian la presencia epidemiológica de las EFC. Para ello es necesario reconocer durante el monitoreo algunos síntomas característicos de las enfermedades causadas por estos patógenos. La EFC que puede manifestar síntomas más tempranamente, aún en etapas vegetativas es la mancha marrón causada por. Septoria glycines es probable encontrar folíolos con pequeñas lesiones necróticas (marrones) rodeadas por un halo clorótico, en el tercio inferior de las plantas. Posteriormente las hojas amarillean y caen, observándose una típica defoliación basal. Para confirmar tempranamente la presencia de antracnosis es importante detectar necrosis en la nervadura en el envés de la hoja, o visualizar pecíolos de folíolos necrosados, a partir de floración en adelante. Finalmente y para el caso de Cercospora kikuchii es también posible detectar su temprana presencia al observar manchas violáceas o púrpuras en foliolos del tercio medio y superior de las plantas o en los pecíolos de sus foliolos principalmente en plantas donde reciban mas intensa y directamente la radiación solar (por Ej. borduras).",
+        respuestas : [
+            "No hay síntomas en el lote",
+            "Hay síntomas de 1 o 2 agentes patógenos",
+            "Hay síntomas de 3 o más agentes patógenos"
         ]
     }
 ];
