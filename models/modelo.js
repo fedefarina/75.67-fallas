@@ -1,26 +1,3 @@
-var preguntasPensamientoLateral = [
-"Un hombre construye una casa rectangular, con todas las paredes mirando al sur, luego ve un oso. ¿De que color?",
-"Algunos meses tienen 31 días, otros solo 30. ¿Cuantos tienen 28 días?",
-"Dos indios americanos, uno niño y otro adulto, están sentados en un tronco, el indiecito es hijo del adulto pero el adulto no es padre del indio pequeño. ¿Cómo es posible?",
-"Un cliente se sobresaltó al encontrar una mosca en su café. Pidió al camarero que le trajese una nueva taza. Tras tomar un sorbo, el cliente dijo: - \"Esta es la misma taza de café que tenía antes!\" - ¿Cómo lo supo?",
-"Si un hombre cava un hoyo en una hora y dos hombres cavan dos hoyos en dos horas. ¿Cuanto tardará un hombre en cavar medio hoyo? ",
-"Está corriendo en una competencia, pasa al que se encuentra segundo. ¿Cuál es su nueva posición?",
-"Un hombre yace muerto en un campo. A su lado hay un paquete sin abrir. No hay nadie más en el campo. ¿Como murio?",
-"Hay tres interruptores afuera de un cuarto que está cerrado con llave. Adentro del cuarto hay tres lámparas. Usted puede encender y apagar los interruptores cuantas veces quiera, siempre y cuando la puerta del cuarto permanezca cerrada. Entonces, usted debe entrar una sola vez al cuarto y determinar cual interruptor le corresponde a cada lámpara.",
-"¿Cómo podremos disponer 9 bolas en 4 cajas de forma que cada una tenga un número impar de bolas y distinto del de cada una de las otras tres?",
-"Nombre tres días consecutivos sin utilizar las palabras Martes, Jueves y Sábado.",
-"Sumando 3 cifras iguales obtengo como resultado 60 pero.. no uso el 20 ¿Cómo hago?",
-"¿Qué números siguen y por qué? 1 — 2 — 4 — 5 — 8 — 11 –12 — 14 — … — … — …",
-"Un taxista recogió a una señora que no paraba de hablar. Como no tenía ganas de entrar en conversación simuló ser sordo y mudo señalando su boca y oídos para indicar que no podía hablar ni oír. Cuando llego al destino apunto al taxímetro para indicar cuánto debía pagarle. La pasajera lo hizo y se bajó. En ese momento se dió cuenta de que el taxista no podía ser sordomudo.",
-"Un hombre entra en un bar y pide al camarero un vaso de agua. El camarero de repente saca una pistola y le apunta. El hombre se sorprende pero después le da las gracias y se marcha.",
-"Un joven por salir de prisa a encontrarse con sus amigos dejó olvidada la licencia de conducir. Una vez en la calle no se detuvo en la luz roja y siguió por una vía de sentido contrario. Todo esto fue observado por un policía de transito quien no hizo el menor intento para impedírselo o para citarlo. ¿Por qué?",
-"Un día José celebra su cumpleaños. Dos días más tarde su hermano gemelo mayor, Santiago, celebra su cumpleaños.¿Cómo es posible esto?",
-"En una línea de ferrocaril, el tendido tiene doble vía excepto en un túnel, que no es lo bastante ancho para acomodar ambas. Por ello, en el túnel, la línea es de vía simple. Una tarde, entró un ten en el túnel marchando en un sentido, y otro tren en el mismo túnel, pero en sentido contrario. Ambos iban a toda velocidad; y sin embargo no llegaron a colisionar. Explíquelo.",
-"Un pastor Tenia que crusar un rio, Para hacerlo Dispone de un pequeño barco. El pastor lleva con el Un Lobo, Una Oveja y Una Lechuga,[El barco puedo portar a el y a una cosa mas] Si el lobo se que da con la Oveja solos Se la come, Si la oveja se queda con la lechuga, Se la come ¿Cómo hace el pastor para pasar las tres cosas que lleva sanas y salvas?",
-"Un hombre estaba en su habitacion Leyendo un libro, En eso, su esposa le apaga la luz. Sin embargo, el hombre sigue leyendo ¿Cómo es posible?",
-"Un prisionero esta encerrado en una celda que tiene dos puertas, una conduce a la muerte y la otra a la libertad. Cada puerta esta custodiada por un vigilante, el prisionero sabe que uno de ellos siempre dice la verdad, y el otro siempre miente. Para elegir la puerta por la que pasara solo puede hacer una pregunta a uno solo de los vigilantes."
-];
-
 var carreras =[
     { id: 0, nombre: "Licenciatura en matemática", descripcion: "El licenciado en Matemática es un profesional con nivel y entrenamiento de excelencia. De acuerdo a su interés, los licenciados en Matemática están en condiciones de: <br>-Seguir estudios de Doctorado y dedicarse a la investigación a nivel internacional<br>-Ejercer la docencia universitaria en otras carreras que requieran cursos de matemática<br>-Insertarse laboralmente en la actividad privada (industrias y empresas consultoras, fundamentalmente) y en institutos de investigación o desarrollo tecnológico<br>-Trabajar en grupos interdisciplinarios con graduados de las distintas carreras de nuestra facultad"},
     { id: 1, nombre: "Licenciatura en física", descripcion: "Los Licenciados en Ciencias Físicas pueden ejercer su profesión tanto en la actividad pública como en la privada. La actividad docente es destacada en el ámbito universitario como también en el de la enseñanza secundaria. La actividad de investigación se desarrolla principalmente en las facultades e institutos de ciencias de todo el país y en menor grado en la industria privada. "},
@@ -170,4 +147,3 @@ module.exports.preguntasCount = preguntas.length;
 module.exports.TestModel = TestModel;
 module.exports.Carreras = carreras;
 module.exports.Preguntas = preguntas;
-module.exports.PreguntasPensamientoLateral = preguntasPensamientoLateral;

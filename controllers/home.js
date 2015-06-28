@@ -4,7 +4,6 @@ module.exports = function(app, log) {
     var preguntasCount = require("../models/modelo").preguntasCount;
     var Carreras = require("../models/modelo").Carreras;
     var Preguntas = require("../models/modelo").Preguntas;
-    var PreguntasPensamientoLateral = require("../models/modelo").PreguntasPensamientoLateral;
     var nools = require("nools");
     var flow = nools.compile("flow/basic.nools", {
         scope: {
@@ -33,14 +32,6 @@ module.exports = function(app, log) {
             appName     : "75.67",
             pageTitle   : "75.67 - Preguntas",
             preguntas    : Preguntas
-        });
-    });
-
-    app.get('/pensamientoLateral', function(req, res){
-        res.render('modelo/pensamientoLateral', {
-            appName     : "75.67",
-            pageTitle   : "75.67 - Preguntas",
-            preguntas   : PreguntasPensamientoLateral
         });
     });
 
