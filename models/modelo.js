@@ -154,7 +154,8 @@ Pregunta.prototype.siguiente = function() {
 };
 
 function TestModel() {
-    this.preguntas = new Array(6);
+    this.preguntas = new Array(preguntas.length);
+    this.puntaje = 0;
     this.posiblesCarreras = carreras.slice();
     this.resultado = undefined;
 }

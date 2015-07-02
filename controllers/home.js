@@ -75,7 +75,7 @@ module.exports = function(app, log) {
         });
     });
 
-    function ejecutarReglas (req, res, pregunta) {
+    function ejecutarReglas(req, res, pregunta) {
         var currTest = req.session.test;
         currTest.preguntas[pregunta.id] = pregunta;
         session = flow.getSession(new Question({

@@ -28,39 +28,6 @@ rule Q1A2 {
     }
 }
 
-rule Q1A3 {
-    when {
-        q: Question (q.id == 0 && q.ans == 3);
-    } then {
-        emit("restar", 0); // Lic. en Matematica
-        emit("restar", 1); // Lic. en Fisica
-        emit("sumar", 3); // Lic. en Ciencias de la Computacion
-        emit("sumar", 5); // Ing. Electronica
-
-    }
-}
-
-rule Q1A4 {
-    when {
-        q: Question (q.id == 0 && q.ans == 4);
-    } then {
-        emit("sumar", 0); // Lic. en Matematica
-        emit("sumar", 1); // Lic. en Fisica
-        emit("sumar", 2); // Lic. en Quimica
-        emit("sumar", 3); // Lic. en Ciencias de la Computacion
-        emit("sumar", 4); // Ing. Civil
-    }
-}
-
-rule Q1A5 {
-    when {
-        q: Question (q.id == 0 && q.ans == 5);
-    } then {
-        emit("sumar", 0); // Lic. en Matematica
-        emit("sumar", 1); // Lic. en Fisica
-    }
-}
-
 // 2da PREGUNTA
 rule Q2A1 {
     when {
@@ -137,33 +104,6 @@ rule Q3A2 {
     }
 }
 
-rule Q3A3 {
-    when {
-        q: Question (q.id == 2 && q.ans == 3);
-    } then {
-        emit("sumar", 0); // Lic. en Matematica
-        emit("sumar", 1); // Lic. en Fisica
-        emit("resta", 3); // Lic. en Ciencias de la Computacion
-    }
-}
-
-rule Q3A4 {
-    when {
-        q: Question (q.id == 2 && q.ans == 4);
-    } then {
-        emit("suma", 3); // Lic. en Ciencias de la Computacion
-    }
-}
-
-rule Q3A5 {
-    when {
-        q: Question (q.id == 2 && q.ans == 5);
-    } then {
-        emit("saca", 4); // Ing. Civil
-        emit("sumar", 3); // Lic. en Ciencias de la Computacion
-    }
-}
-
 // 4ta PREGUNTA
 rule Q4A1 {
     when {
@@ -185,37 +125,6 @@ rule Q4A2 {
         emit("sumar", 4); // Ing. Civil
         emit("sacar", 3); // Lic. en Ciencias de la Computacion
         emit("sacar", 5); // Ing. Electronica
-    }
-}
-
-rule Q4A3 {
-    when {
-        q: Question (q.id == 3 && q.ans == 3);
-    } then {
-        emit("sumar", 0); // Lic. en Matematica
-        emit("sumar", 1); // Lic. en Fisica
-        emit("restar", 3); // Lic. en Ciencias de la Computacion
-        emit("restar", 5); // Ing. Electronica
-    }
-}
-
-rule Q4A4 {
-    when {
-        q: Question (q.id == 3 && q.ans == 4);
-    } then {
-        emit("sumar", 5); // Ing. Electronica
-    }
-}
-
-rule Q4A5 {
-    when {
-        q: Question (q.id == 3 && q.ans == 5);
-    } then {
-        emit("sumar", 3); // Lic. en Ciencias de la Computacion
-        emit("sumar", 5); // Ing. Electronica
-        emit("sacar", 0); // Lic. en Matematica
-        emit("sacar", 1); // Lic. en Fisica
-        emit("restar", 2);
     }
 }
 
@@ -254,25 +163,6 @@ rule Q5A3 {
     }
 }
 
-rule Q5A4 {
-    when {
-        q: Question (q.id == 4 && q.ans == 4);
-    } then {
-        emit("sumar", 1); // Lic. en Fisica
-        emit("sumar", 0); // Lic. en Matematica
-    }
-}
-
-rule Q5A5 {
-    when {
-        q: Question (q.id == 4 && q.ans == 5);
-    } then {
-        emit("sumar", 1); // Lic. en Fisica
-        emit("sumar", 0); // Lic. en Matematica
-        emit("sacar", 4); // Ing. Civil
-    }
-}
-
 // 6ta PREGUNTA
 rule Q6A1 {
     when {
@@ -305,27 +195,6 @@ rule Q6A3 {
         emit("sumar", 3); // Lic. en Ciencias de la Computacion
         emit("sumar", 4); // Ing. Civil
         emit("sumar", 5); // Ing. Electronica
-    }
-}
-
-rule Q6A4 {
-    when {
-        q: Question (q.id == 5 && q.ans == 4);
-    } then {
-        emit("sumar", 0); // Lic. en Matematica
-        emit("sumar", 1); // Lic. en Fisica
-        emit("sumar", 2); // Lic. en Quimica
-    }
-}
-
-rule Q6A5 {
-    when {
-        q: Question (q.id == 5 && q.ans == 5);
-    } then {
-        emit("saca", 4); // Ing. Civil
-        emit("sumar", 0); // Lic. en Matematica
-        emit("sumar", 1); // Lic. en Fisica
-        emit("sumar", 2); // Lic. en Quimica
     }
 }
 
@@ -378,5 +247,96 @@ rule Q7A5 {
     } then {
         emit("sumar", 0); // Lic. en Matematica
         emit("sumar", 1); // Lic. en Fisica
+    }
+}
+
+// 8va PREGUNTA
+rule Q8A1 {
+    when {
+        q: Question (q.id == 7 && q.ans == 1);
+    } then {
+        emit("sacar", 0); // Lic. en Matematica
+        emit("sacar", 1); // Lic. en Fisica
+        emit("sumar", 3); // Lic. en Ciencias de la Computacion
+        emit("sumar", 5); // Ing. Electronica
+    }
+}
+
+rule Q8A2 {
+    when {
+        q: Question (q.id == 7 && q.ans == 2);
+    } then {
+        emit("sacar", 0); // Lic. en Matematica
+        emit("sacar", 1); // Lic. en Fisica
+        emit("sumar", 3); // Lic. en Ciencias de la Computacion
+        emit("sumar", 4); // Ing. Civil
+    }
+}
+
+// 9na PREGUNTA
+rule Q9A1 {
+    when {
+        q: Question (q.id == 8 && q.ans == 1);
+    } then {
+        emit("sacar", 0); // Lic. en Matematica
+        emit("sacar", 1); // Lic. en Fisica
+        emit("sumar", 3); // Lic. en Ciencias de la Computacion
+        emit("sumar", 5); // Ing. Electronica
+    }
+}
+
+rule Q9A2 {
+    when {
+        q: Question (q.id == 8 && q.ans == 2);
+    } then {
+        emit("sacar", 0); // Lic. en Matematica
+        emit("sacar", 1); // Lic. en Fisica
+        emit("sumar", 3); // Lic. en Ciencias de la Computacion
+        emit("sumar", 4); // Ing. Civil
+    }
+}
+
+rule Q9A3 {
+    when {
+        q: Question (q.id == 8 && q.ans == 3);
+    } then {
+        emit("restar", 0); // Lic. en Matematica
+        emit("restar", 1); // Lic. en Fisica
+        emit("sumar", 3); // Lic. en Ciencias de la Computacion
+        emit("sumar", 5); // Ing. Electronica
+    }
+}
+
+// 10ma PREGUNTA
+rule Q10A1 {
+    when {
+        q: Question (q.id == 9 && q.ans == 1);
+    } then {
+        emit("sacar", 0); // Lic. en Matematica
+        emit("sacar", 1); // Lic. en Fisica
+        emit("sumar", 3); // Lic. en Ciencias de la Computacion
+        emit("sumar", 5); // Ing. Electronica
+    }
+}
+
+rule Q10A2 {
+    when {
+        q: Question (q.id == 9 && q.ans == 2);
+    } then {
+        emit("sacar", 0); // Lic. en Matematica
+        emit("sacar", 1); // Lic. en Fisica
+        emit("sumar", 3); // Lic. en Ciencias de la Computacion
+        emit("sumar", 4); // Ing. Civil
+    }
+}
+
+rule Q10A3 {
+    when {
+        q: Question (q.id == 9 && q.ans == 3);
+    } then {
+        emit("restar", 0); // Lic. en Matematica
+        emit("restar", 1); // Lic. en Fisica
+        emit("sumar", 3); // Lic. en Ciencias de la Computacion
+        emit("sumar", 5); // Ing. Electronica
     }
 }
