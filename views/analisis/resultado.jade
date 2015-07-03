@@ -2,18 +2,8 @@ extends ../layout
 
 block content
     br
-    - if (!resultado.length)
-        .page-header
-            h2 Lo sentimos, pero sus aptitudes no concuerdan con ninguna de las carreras disponibles
-    - else
-        .page-header
-            h2 Posibles Carreras:
-        .col-md-11.col-centered
-            - for (var i = 0; i < resultado.length; i++)
-                .list-group
-                    a.list-group-item(href="/carreras/\#carrera_#{resultado[i].id}")
-                        h4.list-group-item-heading
-                            span
-                                | #{resultado[i].nombre}
-                            span.col-right
-                                | #{resultado[i].puntos} / 7 pts
+    .page-header
+        h2 #{resultado.titulo}
+    .row
+        .col-md-12.col-centered
+            p #{resultado.descripcion}

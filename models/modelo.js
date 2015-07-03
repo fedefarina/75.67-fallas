@@ -162,7 +162,6 @@ function TestModel() {
 
 module.exports = Pregunta;
 module.exports.preguntasCount = preguntas.length;
-
 module.exports.TestModel = TestModel;
 module.exports.Carreras = carreras;
 module.exports.Preguntas = preguntas;
