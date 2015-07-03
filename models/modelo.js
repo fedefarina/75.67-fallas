@@ -47,18 +47,18 @@ var preguntas = [
         pregunta: "Presencia de EFC en el cultivo de soja del año anterior (rastrojo)",
         descripcion: "Es conveniente conocer los antecedentes sanitarios del lote si es que proviene de soja e ira nuevamente a soja. Es una forma indirecta de estimar la fuente de inóculo proveniente del rastrojo anterior. Se espera que si existieron síntomas el año anterior sus agentes causales estén sobreviviendo en los rastrojos presentes en el mismo lote.",
         respuestas : [
-            "No hubo siembra de soja en el año anterior",
+            "Hubo siembra en el año anterior y hubo presencia de EFC",
             "Hubo siembra en el año anterior y no hubo presencia de EFC",
-            "Hubo siembra en el año anterior y hubo presencia de EFC"
+            "No hubo siembra de soja en el año anterior"
         ]
     },
     {
         pregunta: "Calidad sanitaria de la semilla",
         descripcion: "Se considera los patógenos asociados a la semilla y transmitidos a la plántula; en áreas bajo rotación de cultivos. Si no se hace tratamiento de semilla la probabilidad de introducir o aumentar los patógenos causantes de EFC es mayor.",
         respuestas : [
-            "Presencia de 3 o más agentes patógenos",
             "Presencia de 1 o 2 agentes patógenos",
-            "No se ha realizado análisis de calidad sanitaria o se desconoce la misma",
+            "Presencia de 3 o más agentes patógenos",
+            "No se ha realizado análisis de calidad sanitaria o se desconoce la misma"
         ]
     },
     {
@@ -84,9 +84,9 @@ var preguntas = [
         pregunta : "Potencial productivo del lote",
         descripcion: "Tomar como base la productividad media del productor en años sin adversidades climáticas u otro factor anormal.",
         respuestas : [
-            "Alto",
+            "Bajo",
             "Moderado",
-            "Bajo"
+            "Alto"
         ]
     },
     {

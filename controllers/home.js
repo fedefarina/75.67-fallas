@@ -69,11 +69,18 @@ module.exports = function(app, log) {
         posiblesCarreras.sort(function(a, b) {
             return b.puntos - a.puntos;
         });*/
-        log.info("Puntaje al terminar el test: " + req.session.test.puntaje);
+        var puntaje = req.session.test.puntaje;
+        log.info("Puntaje al terminar el test: " + puntaje);
+        var resultado = Resultados[0];
+        if ((23 <= puntaje) && (puntaje <= 35)) {
+          resultado = Resultados[1];
+        } else if (puntaje > 35) {
+          resultado = Resultados[2];
+        }
         res.render('analisis/resultado', {
             appName     : "75.67",
             pageTitle   : "75.67 - Resultado",
-            resultado   : Resultados[0]
+            resultado   : resultado
         });
     });
 
