@@ -1,7 +1,7 @@
 var preguntas = [
     {
         pregunta: "Precipitación pluvial ocurrida entre R3-R5.5",
-        descripcion: "Se relaciona con la frecuencia y duración del mojado foliar. Germinación y diseminación de esporas. Es uno de los ítems de mayor importancia. Esta basada en la cantidad de precipitaciones que se acumulan desde R3 en adelante",
+        descripcion: "Se relaciona con la frecuencia y duración del mojado foliar. Germinación y diseminación de esporas. Es uno de los ítems de mayor importancia. Esta basada en la cantidad de precipitaciones que se acumulan desde <b>R3</b> en adelante. <br> Si cuenta con la predicción meteorológica con alta probabilidad que lloverá entre <b>R3-R5</b> y quiere asumir ese riesgo, puede aplicar en <b>R3</b> y probablemente tendrá mejor respuesta (aunque no estadísticamente significativa) que en <b>R5</b> si es que ellas lluvias pronosticadas finalmente ocurren dentro de los 15 días aproximadamente. Sin embargo, si se aplicara en <b>R3</b> y no lloviera lo suficiente (al menos 50 mm acumulativamente en los 15 días posteriores a esa aplicación), esta pulverización probablemente fracase.Asimismo si llueve abundantemente desde <b>R3-R4</b> sin que llegue <b>R5</b> y el sistema le da la orientación, podrá asimismo adelantarse la aplicación antes de que llegue <b>R5</b>.",
         respuestas : [
             "Menos de 50 mm",
             "50 mm o más",
@@ -28,7 +28,7 @@ var preguntas = [
     },
     {
         pregunta: "Sistema de labranza",
-        descripcion: "Las EFC son en causadas en su mayoría por agentes necrotróficos que sobreviven en rastrojo, de allí su valoración.",
+        descripcion: "Las <b>EFC</b> son en causadas en su mayoría por agentes necrotróficos que sobreviven en rastrojo, de allí su valoración.",
         respuestas : [
             "Labranza cero o siembra directa",
             "Otro sistema distinto a labranza cero"
@@ -45,7 +45,7 @@ var preguntas = [
     },
     {
         pregunta: "Calidad sanitaria de la semilla",
-        descripcion: "Se considera los patógenos asociados a la semilla y transmitidos a la plántula; en áreas bajo rotación de cultivos. Si no se hace tratamiento de semilla la probabilidad de introducir o aumentar los patógenos causantes de EFC es mayor.",
+        descripcion: "Se considera los patógenos asociados a la semilla y transmitidos a la plántula; en áreas bajo rotación de cultivos. Si no se hace tratamiento de semilla la probabilidad de introducir o aumentar los patógenos causantes de <b>EFC</b> es mayor.",
         respuestas : [
             "Presencia de 1 o 2 agentes patógenos",
             "Presencia de 3 o más agentes patógenos",
@@ -82,7 +82,7 @@ var preguntas = [
     },
     {
         pregunta: "Presencia actual de síntomas en el lote",
-        descripcion: "Considerar este item al momento de la calificación. Algunas veces pueden observarse síntomas de Septoria, Colletotrichum (mancha marrón, antracnosisi) o Cercospora (tizón morado) más tempranamente que pre-anuncian la presencia epidemiológica de las EFC. Para ello es necesario reconocer durante el monitoreo algunos síntomas característicos de las enfermedades causadas por estos patógenos. La EFC que puede manifestar síntomas más tempranamente, aún en etapas vegetativas es la mancha marrón causada por. Septoria glycines es probable encontrar folíolos con pequeñas lesiones necróticas (marrones) rodeadas por un halo clorótico, en el tercio inferior de las plantas. Posteriormente las hojas amarillean y caen, observándose una típica defoliación basal. Para confirmar tempranamente la presencia de antracnosis es importante detectar necrosis en la nervadura en el envés de la hoja, o visualizar pecíolos de folíolos necrosados, a partir de floración en adelante. Finalmente y para el caso de Cercospora kikuchii es también posible detectar su temprana presencia al observar manchas violáceas o púrpuras en foliolos del tercio medio y superior de las plantas o en los pecíolos de sus foliolos principalmente en plantas donde reciban mas intensa y directamente la radiación solar (por Ej. borduras).",
+        descripcion: "Considerar este item al momento de la calificación. Algunas veces pueden observarse síntomas de Septoria, Colletotrichum (mancha marrón, antracnosisi) o Cercospora (tizón morado) más tempranamente que pre-anuncian la presencia epidemiológica de las <b>EFC</b>. Para ello es necesario reconocer durante el monitoreo algunos síntomas característicos de las enfermedades causadas por estos patógenos. La <b>EFC</b> que puede manifestar síntomas más tempranamente, aún en etapas vegetativas es la mancha marrón causada por. Septoria glycines es probable encontrar folíolos con pequeñas lesiones necróticas (marrones) rodeadas por un halo clorótico, en el tercio inferior de las plantas. Posteriormente las hojas amarillean y caen, observándose una típica defoliación basal. Para confirmar tempranamente la presencia de antracnosis es importante detectar necrosis en la nervadura en el envés de la hoja, o visualizar pecíolos de folíolos necrosados, a partir de floración en adelante. Finalmente y para el caso de Cercospora kikuchii es también posible detectar su temprana presencia al observar manchas violáceas o púrpuras en foliolos del tercio medio y superior de las plantas o en los pecíolos de sus foliolos principalmente en plantas donde reciban mas intensa y directamente la radiación solar (por Ej. borduras).",
         respuestas : [
             "No hay síntomas en el lote",
             "Hay síntomas de 1 o 2 agentes patógenos",
