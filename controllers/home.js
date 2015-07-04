@@ -2,7 +2,6 @@ module.exports = function(app, log) {
     var Pregunta = require("../models/modelo");
     var TestModel = require("../models/modelo").TestModel;
     var preguntasCount = require("../models/modelo").preguntasCount;
-    var Carreras = require("../models/modelo").Carreras;
     var Preguntas = require("../models/modelo").Preguntas;
     var Resultados = require("../models/modelo").Resultados;
     var nools = require("nools");
@@ -20,19 +19,19 @@ module.exports = function(app, log) {
         });
     });
 
-    app.get('/carreras', function(req, res) {
-        res.render('modelo/carreras', {
+    app.get('/resultados', function(req, res) {
+        res.render('modelo/resultados', {
             appName     : "75.67",
-            pageTitle   : "75.67 - Carreras",
-            carreras    : Carreras
+            pageTitle   : "75.67 - Resultados",
+            resultados  : Resultados
         });
     });
 
     app.get('/preguntas', function(req, res) {
         res.render('modelo/preguntas', {
-            appName     : "75.67",
-            pageTitle   : "75.67 - Preguntas",
-            preguntas    : Preguntas
+            appName    : "75.67",
+            pageTitle  : "75.67 - Preguntas",
+            preguntas  : Preguntas
         });
     });
 
@@ -60,15 +59,6 @@ module.exports = function(app, log) {
     });
 
     app.get('/resultado', function(req, res) {
-        /*var posiblesCarreras = [];
-        for (var i = 0; i < req.session.test.posiblesCarreras.length; i++) {
-            if (req.session.test.posiblesCarreras[i] && req.session.test.posiblesCarreras[i].puntos > 0) {
-                posiblesCarreras.push(req.session.test.posiblesCarreras[i]);
-            }
-        }
-        posiblesCarreras.sort(function(a, b) {
-            return b.puntos - a.puntos;
-        });*/
         var puntaje = req.session.test.puntaje;
         log.info("Puntaje al terminar el test: " + puntaje);
         var resultado = Resultados[0];
@@ -91,39 +81,19 @@ module.exports = function(app, log) {
             id : pregunta.id,
             ans : pregunta.respuesta
         }));
-        session.on('sumar', function(carrera) {
-            if (currTest.posiblesCarreras[carrera]) {
-                currTest.posiblesCarreras[carrera].puntos = (currTest.posiblesCarreras[carrera].puntos) ? currTest.posiblesCarreras[carrera].puntos + 1 : 1;
-            }
-        }).on('restar', function(carrera) {
-            if (currTest.posiblesCarreras[carrera]) {
-                currTest.posiblesCarreras[carrera].puntos = (currTest.posiblesCarreras[carrera].puntos) ? currTest.posiblesCarreras[carrera].puntos - 1 : -1;
-            }
-        }).on('sacar', function(carrera) {
-            currTest.posiblesCarreras[carrera] = null;
-        }).on('puntaje', function(puntos) {
+        session.on('puntaje', function(puntos) {
           log.info("Puntos a sumar: " + puntos);
           currTest.puntaje += puntos;
           log.info("Puntos totales: " + currTest.puntaje);
         }).match(function(err) {
             if(err){
-                currTest.posiblesCarreras = [];
+                currTest.puntaje = 0;
                 log.error(err);
             }
         }).then(function() {
-            var hayPosibles = true;
-            /*
-            var hayPosibles = false;
-            for (var i = 0; i < currTest.posiblesCarreras.length; i++) {
-                if (currTest.posiblesCarreras[i]) {
-                    hayPosibles = true;
-                    break;
-                }
-            }
-            */
             req.session.test = currTest;
             var siguiente = pregunta.siguiente();
-            if (siguiente && hayPosibles) {
+            if (siguiente) {
                 log.info("Siguiente pregunta: " + JSON.stringify(siguiente));
                 res.render('analisis/analisis', {
                     appName     : "75.67",
