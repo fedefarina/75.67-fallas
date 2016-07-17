@@ -94,18 +94,18 @@ var preguntas = [
 var resultados = [
     {
       id: 0,
-      titulo: "Baja probabilidad de retorno económico de la aplicación de fungicida",
-      descripcion: "Dada las escasas lluvias y/o desconocimiento de la calidad de las semillas no aseguran que se recupere la inversión económica realizada para la aplicación de fungicida."
+      titulo: "Baja probabilidad de portar la enfermedad diabetes",
+      descripcion: "Dados sus antecedentes familiares, y características inherentes a su persona se considera baja la probabilidad de poseer la enfermedad"
     },
     {
       id: 1,
-      titulo: "Discutir con un técnico asesor sobre cómo aplicar el fungicida",
-      descripcion: "Hay probabilidad de que recupere la inversión económica realizada. Debe discutir con el técnico asesor la conveniencia económica y técnica de la aplicación y analizar los pronósticos de lluvia venideros."
+      titulo: "Probabilidad de existencia de la enfermedad",
+      descripcion: "Dados sus antecedentes familiares y estudios, presenta posibilidades de estar en un grupo de riesgo. Se recomienda consultar un especialista y realizar seguimiento periódico."
     },
     {
       id: 2,
-      titulo: "Alta probabilidad de retorno económico de la aplicación de fungicida",
-      descripcion: "Dada las abundantes lluvias y buena calidad sanitaria de las semillas se asegura que se recupere la inversión económica realizada para la aplicación de fungicida."
+      titulo: "",
+      descripcion: ""
     }
 ];
 

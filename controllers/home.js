@@ -81,6 +81,10 @@ module.exports = function(app, log) {
             id : pregunta.id,
             ans : pregunta.respuesta
         }));
+        session.on('respuesta', function(responseNumber, optionSelected) {
+            currTest.optionsSelected = currTest.optionsSelected || {};
+            currTest.optionsSelected[responseNumber] = optionSelected;
+        });
         session.on('puntaje', function(puntos) {
           log.info("Puntos a sumar: " + puntos);
           currTest.puntaje += puntos;
