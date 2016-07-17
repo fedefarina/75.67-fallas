@@ -94,18 +94,13 @@ var preguntas = [
 var resultados = [
     {
       id: 0,
-      titulo: "Baja probabilidad de retorno económico de la aplicación de fungicida",
-      descripcion: "Dada las escasas lluvias y/o desconocimiento de la calidad de las semillas no aseguran que se recupere la inversión económica realizada para la aplicación de fungicida."
+      titulo: "No es posible dar un diagnóstico",
+      descripcion: "No se encontró ningúna posible causa de diabetes."
     },
     {
       id: 1,
-      titulo: "Discutir con un técnico asesor sobre cómo aplicar el fungicida",
-      descripcion: "Hay probabilidad de que recupere la inversión económica realizada. Debe discutir con el técnico asesor la conveniencia económica y técnica de la aplicación y analizar los pronósticos de lluvia venideros."
-    },
-    {
-      id: 2,
-      titulo: "Alta probabilidad de retorno económico de la aplicación de fungicida",
-      descripcion: "Dada las abundantes lluvias y buena calidad sanitaria de las semillas se asegura que se recupere la inversión económica realizada para la aplicación de fungicida."
+      titulo: "Se recomiendan estudios periódicos",
+      descripcion: "Se encontraron posibles causas de diabetes."
     }
 ];
 
