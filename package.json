@@ -8,16 +8,17 @@
     "start": "node ./app.js"
   },
   "dependencies": {
-    "express": "3.3.x",
-    "stylus": "0.31.0",
-    "jade": "0.27.x",
-    "mongoose": "3.6.x",
-    "moment": "1.7.2",
-    "nconf": "0.7.x",
-    "winston": "0.8.x",
-    "faker": "1.x.x",
     "connect-ensure-login": "0.1.x",
-	"nools" : "*"
+    "express": "3.3.x",
+    "faker": "1.x.x",
+    "jade": "0.27.x",
+    "lodash": "^4.13.1",
+    "moment": "1.7.2",
+    "mongoose": "3.6.x",
+    "nconf": "0.7.x",
+    "nools": "*",
+    "stylus": "0.31.0",
+    "winston": "0.8.x"
   },
   "devDependencies": {
     "grunt": "~0.4.5",

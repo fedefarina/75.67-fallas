@@ -94,13 +94,13 @@ var preguntas = [
 var resultados = [
     {
       id: 0,
-      titulo: "No es posible dar un diagnóstico",
-      descripcion: "No se encontró ningúna posible causa de diabetes."
+      titulo: "Baja probabilidad de portar la enfermedad diabetes",
+      descripcion: "Dados sus antecedentes familiares, y características inherentes a su persona se considera baja la probabilidad de poseer la enfermedad"
     },
     {
       id: 1,
-      titulo: "Se recomiendan estudios periódicos",
-      descripcion: "Se encontraron posibles causas de diabetes."
+      titulo: "Probabilidad de existencia de la enfermedad",
+      descripcion: "Dados sus antecedentes familiares y estudios, presenta posibilidades de estar en un grupo de riesgo. Se recomienda consultar un especialista y realizar seguimiento periódico."
     }
 ];
 

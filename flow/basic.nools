@@ -4,255 +4,185 @@ define Question {
 }
 
 // 1ra Pregunta
-// Precipitacion pluvial ocurrida entre R3-R5.5
+// Glucosa plasmatica
 
-rule Q1A1 { // Menos de 50 mm
+rule Q1A1 { // Menos de 99,5
     when {
         q: Question (q.id == 0 && q.ans == 0);
     } then {
-        emit('puntaje', 2);
+        emit('plas','plas0');
     }
 }
 
-rule Q1A2 { // 50 mm o mas
+rule Q1A2 { // 99,5 a 132,6
     when {
         q: Question (q.id == 0 && q.ans == 1);
     } then {
-        emit('puntaje', 4);
+        emit('plas','plas1');
+    }
+}
+
+rule Q1A3 { // mas de 132,6
+    when {
+        q: Question (q.id == 0 && q.ans == 2);
+    } then {
+        emit('plas','plas2');
     }
 }
 
 // 2da PREGUNTA
-// Precipitación pluvial ocurrida
+// Presion
 
-rule Q2A1 {
+rule Q2A1 { //menos de 67,77
     when {
         q: Question (q.id == 1 && q.ans == 0);
     } then {
-        emit('puntaje', 2);
+        emit('pres', 'pres0');
     }
 }
 
-rule Q2A2 {
+rule Q2A2 { //entre 67,77 y 81,33
     when {
         q: Question (q.id == 1 && q.ans == 1);
     } then {
-        emit('puntaje', 4);
+        emit('pres', 'pres1');
     }
 }
 
-rule Q2A3 {
+rule Q2A3 { // mas de 81,33
     when {
         q: Question (q.id == 1 && q.ans == 2);
     } then {
-        emit('puntaje', 6);
-    }
-}
-
-rule Q2A4 {
-    when {
-        q: Question (q.id == 1 && q.ans == 3);
-    } then {
-        emit('puntaje', 8);
-    }
-}
-
-rule Q2A5 {
-    when {
-        q: Question (q.id == 1 && q.ans == 4);
-    } then {
-        emit('puntaje', 10);
+        emit('pres', 'pres2');
     }
 }
 
 // 3ra PREGUNTA
-rule Q3A1 {
+//pliegues cutaneos
+rule Q3A1 { //menos de 16,5
     when {
         q: Question (q.id == 2 && q.ans == 0);
     } then {
-        emit('puntaje', 2);
+        emit('skin', 'skin0');
     }
 }
 
-rule Q3A2 {
+rule Q3A2 { //16,5 a 33
     when {
         q: Question (q.id == 2 && q.ans == 1);
     } then {
-        emit('puntaje', 4);
+        emit('skin', 'skin1');
+    }
+}
+
+rule Q3A3 { // mas de 33
+    when {
+        q: Question (q.id == 2 && q.ans == 2);
+    } then {
+        emit('skin', 'skin2');
     }
 }
 
 // 4ta PREGUNTA
-rule Q4A1 {
+// IMC indice masa corporal
+rule Q4A1 { // 0 - 28,75
     when {
         q: Question (q.id == 3 && q.ans == 0);
     } then {
-        emit('puntaje', 1);
+        emit('mass', 'mass0');
     }
 }
 
-rule Q4A2 {
+rule Q4A2 { // 28,75 - 38,34
     when {
         q: Question (q.id == 3 && q.ans == 1);
     } then {
-        emit('puntaje', 2);
+        emit('mass', 'mass1');
+    }
+}
+
+rule Q4A3 { // >38,34
+    when {
+        q: Question (q.id == 3 && q.ans == 2);
+    } then {
+        emit('mass', 'mass2');
     }
 }
 
 // 5ta PREGUNTA
-rule Q5A1 {
+// pedigree
+rule Q5A1 { // 0,078 - 0,468
     when {
         q: Question (q.id == 4 && q.ans == 0);
     } then {
-        emit('puntaje', 1);
+        emit('pedi', 'pedi0');
     }
 }
 
-rule Q5A2 {
+rule Q5A2 { // 0,468 - 0,859
     when {
         q: Question (q.id == 4 && q.ans == 1);
     } then {
-        emit('puntaje', 2);
+        emit('pedi', 'pedi1');
     }
 }
 
-rule Q5A3 {
+rule Q5A3 { //0,859 - 2,42
     when {
         q: Question (q.id == 4 && q.ans == 2);
     } then {
-        emit('puntaje', 3);
+        emit('pedi', 'pedi2');
     }
 }
 
 // 6ta PREGUNTA
-rule Q6A1 {
+// edad
+rule Q6A1 { // < 26
     when {
         q: Question (q.id == 5 && q.ans == 0);
     } then {
-        emit('puntaje', 3);
+        emit('age', 'age0');
     }
 }
 
-rule Q6A2 {
+rule Q6A2 { //27 - 38
     when {
         q: Question (q.id == 5 && q.ans == 1);
     } then {
-        emit('puntaje', 2);
+        emit('age', 'age1');
     }
 }
 
-rule Q6A3 {
+rule Q6A3 { // 39 - 55
     when {
         q: Question (q.id == 5 && q.ans == 2);
     } then {
-        emit('puntaje', 1);
+        emit('age', 'age2');
+    }
+}
+
+rule Q6A4 { // >56
+    when {
+        q: Question (q.id == 5 && q.ans == 3);
+    } then {
+        emit('age', 'age3');
     }
 }
 
 // 7ta PREGUNTA
-rule Q7A1 {
+//embarazos
+rule Q7A1 { //0 - 3
     when {
         q: Question (q.id == 6 && q.ans == 0);
     } then {
-        emit('puntaje', 10);
+        emit('preg', 'preg0');
     }
 }
 
-rule Q7A2 {
+rule Q7A2 { // >3
     when {
         q: Question (q.id == 6 && q.ans == 1);
     } then {
-        emit('puntaje', 8);
-    }
-}
-
-rule Q7A3 {
-    when {
-        q: Question (q.id == 6 && q.ans == 2);
-    } then {
-        emit('puntaje', 6);
-    }
-}
-
-rule Q7A4 {
-    when {
-        q: Question (q.id == 6 && q.ans == 3);
-    } then {
-        emit('puntaje', 4);
-    }
-}
-
-rule Q7A5 {
-    when {
-        q: Question (q.id == 6 && q.ans == 4);
-    } then {
-        emit('puntaje', 2);
-    }
-}
-
-// 8va PREGUNTA
-rule Q8A1 {
-    when {
-        q: Question (q.id == 7 && q.ans == 0);
-    } then {
-        emit('puntaje', 1);
-    }
-}
-
-rule Q8A2 {
-    when {
-        q: Question (q.id == 7 && q.ans == 1);
-    } then {
-        emit('puntaje', 2);
-    }
-}
-
-// 9na PREGUNTA
-rule Q9A1 {
-    when {
-        q: Question (q.id == 8 && q.ans == 0);
-    } then {
-        emit('puntaje', 2);
-    }
-}
-
-rule Q9A2 {
-    when {
-        q: Question (q.id == 8 && q.ans == 1);
-    } then {
-        emit('puntaje', 4);
-    }
-}
-
-rule Q9A3 {
-    when {
-        q: Question (q.id == 8 && q.ans == 2);
-    } then {
-        emit('puntaje', 6);
-    }
-}
-
-// 10ma PREGUNTA
-rule Q10A1 {
-    when {
-        q: Question (q.id == 9 && q.ans == 0);
-    } then {
-        emit('puntaje', 6);
-    }
-}
-
-rule Q10A2 {
-    when {
-        q: Question (q.id == 9 && q.ans == 1);
-    } then {
-        emit('puntaje', 4);
-    }
-}
-
-rule Q10A3 {
-    when {
-        q: Question (q.id == 9 && q.ans == 2);
-    } then {
-        emit('puntaje', 2);
+        emit('preg', 'preg1');
     }
 }
