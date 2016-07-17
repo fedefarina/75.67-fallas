@@ -10,7 +10,7 @@ rule Q1A1 { // Menos de 99,5
     when {
         q: Question (q.id == 0 && q.ans == 0);
     } then {
-        emit('puntaje', 2);
+        emit('plas','plas0');
     }
 }
 
@@ -18,7 +18,7 @@ rule Q1A2 { // 99,5 a 132,6
     when {
         q: Question (q.id == 0 && q.ans == 1);
     } then {
-        emit('puntaje', 4);
+        emit('plas','plas1');
     }
 }
 
@@ -26,7 +26,7 @@ rule Q1A3 { // mas de 132,6
     when {
         q: Question (q.id == 0 && q.ans == 2);
     } then {
-        emit('puntaje', 4);
+        emit('plas','plas2');
     }
 }
 
@@ -37,7 +37,7 @@ rule Q2A1 { //menos de 67,77
     when {
         q: Question (q.id == 1 && q.ans == 0);
     } then {
-        emit('puntaje', 2);
+        emit('pres', 'pres0');
     }
 }
 
@@ -45,7 +45,7 @@ rule Q2A2 { //entre 67,77 y 81,33
     when {
         q: Question (q.id == 1 && q.ans == 1);
     } then {
-        emit('puntaje', 4);
+        emit('pres', 'pres1');
     }
 }
 
@@ -53,7 +53,7 @@ rule Q2A3 { // mas de 81,33
     when {
         q: Question (q.id == 1 && q.ans == 2);
     } then {
-        emit('puntaje', 6);
+        emit('pres', 'pres2');
     }
 }
 
@@ -63,7 +63,7 @@ rule Q3A1 { //menos de 16,5
     when {
         q: Question (q.id == 2 && q.ans == 0);
     } then {
-        emit('puntaje', 2);
+        emit('skin', 'skin0');
     }
 }
 
@@ -71,15 +71,15 @@ rule Q3A2 { //16,5 a 33
     when {
         q: Question (q.id == 2 && q.ans == 1);
     } then {
-        emit('puntaje', 4);
+        emit('skin', 'skin1');
     }
 }
 
-rule Q3A2 { // mas de 33
+rule Q3A3 { // mas de 33
     when {
         q: Question (q.id == 2 && q.ans == 2);
     } then {
-        emit('puntaje', 4);
+        emit('skin', 'skin2');
     }
 }
 
@@ -89,7 +89,7 @@ rule Q4A1 { // 0 - 28,75
     when {
         q: Question (q.id == 3 && q.ans == 0);
     } then {
-        emit('puntaje', 1);
+        emit('mass', 'mass0');
     }
 }
 
@@ -97,7 +97,7 @@ rule Q4A2 { // 28,75 - 38,34
     when {
         q: Question (q.id == 3 && q.ans == 1);
     } then {
-        emit('puntaje', 2);
+        emit('mass', 'mass1');
     }
 }
 
@@ -105,7 +105,7 @@ rule Q4A3 { // >38,34
     when {
         q: Question (q.id == 3 && q.ans == 2);
     } then {
-        emit('puntaje', 2);
+        emit('mass', 'mass2');
     }
 }
 
@@ -115,7 +115,7 @@ rule Q5A1 { // 0,078 - 0,468
     when {
         q: Question (q.id == 4 && q.ans == 0);
     } then {
-        emit('puntaje', 1);
+        emit('pedi', 'pedi0');
     }
 }
 
@@ -123,7 +123,7 @@ rule Q5A2 { // 0,468 - 0,859
     when {
         q: Question (q.id == 4 && q.ans == 1);
     } then {
-        emit('puntaje', 2);
+        emit('pedi', 'pedi1');
     }
 }
 
@@ -131,7 +131,7 @@ rule Q5A3 { //0,859 - 2,42
     when {
         q: Question (q.id == 4 && q.ans == 2);
     } then {
-        emit('puntaje', 3);
+        emit('pedi', 'pedi2');
     }
 }
 
@@ -141,7 +141,7 @@ rule Q6A1 { // < 26
     when {
         q: Question (q.id == 5 && q.ans == 0);
     } then {
-        emit('puntaje', 3);
+        emit('age', 'age0');
     }
 }
 
@@ -149,7 +149,7 @@ rule Q6A2 { //27 - 38
     when {
         q: Question (q.id == 5 && q.ans == 1);
     } then {
-        emit('puntaje', 2);
+        emit('age', 'age1');
     }
 }
 
@@ -157,15 +157,15 @@ rule Q6A3 { // 39 - 55
     when {
         q: Question (q.id == 5 && q.ans == 2);
     } then {
-        emit('puntaje', 1);
+        emit('age', 'age2');
     }
 }
 
-rule Q6A3 { // >56
+rule Q6A4 { // >56
     when {
         q: Question (q.id == 5 && q.ans == 3);
     } then {
-        emit('puntaje', 1);
+        emit('age', 'age3');
     }
 }
 
@@ -175,7 +175,7 @@ rule Q7A1 { //0 - 3
     when {
         q: Question (q.id == 6 && q.ans == 0);
     } then {
-        emit('puntaje', 10);
+        emit('preg', 'preg0');
     }
 }
 
@@ -183,6 +183,6 @@ rule Q7A2 { // >3
     when {
         q: Question (q.id == 6 && q.ans == 1);
     } then {
-        emit('puntaje', 8);
+        emit('preg', 'preg1');
     }
 }

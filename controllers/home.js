@@ -1,3 +1,6 @@
+var _ = require('lodash');
+
+
 module.exports = function(app, log) {
     var Pregunta = require("../models/modelo");
     var TestModel = require("../models/modelo").TestModel;
@@ -77,10 +80,16 @@ module.exports = function(app, log) {
     function ejecutarReglas(req, res, pregunta) {
         var currTest = req.session.test;
         currTest.preguntas[pregunta.id] = pregunta;
+        currTest.optionsSelected = currTest.optionsSelected || {};
         session = flow.getSession(new Question({
             id : pregunta.id,
             ans : pregunta.respuesta
         }));
+        _(['plas','pres','skin','mass','pedi','age','preg']).forEach(function(variableName){
+            session.on(variableName, function(result){
+                currTest.optionsSelected[variableName] = result;
+            });
+        });
         session.on('puntaje', function(puntos) {
           log.info("Puntos a sumar: " + puntos);
           currTest.puntaje += puntos;
