@@ -20,3 +20,7 @@
     float: right;
     margin: 0 auto;
 }
+
+.container td{
+	text-align: left;
+}
