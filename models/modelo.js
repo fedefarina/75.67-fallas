@@ -1,42 +1,43 @@
 var preguntas = [
     {
-        pregunta: "Precipitación pluvial ocurrida entre R3-R5.5",
-        descripcion: "Se relaciona con la frecuencia y duración del mojado foliar. Germinación y diseminación de esporas. Es uno de los ítems de mayor importancia. Esta basada en la cantidad de precipitaciones que se acumulan desde <b>R3</b> en adelante. <br> Si cuenta con la predicción meteorológica con alta probabilidad que lloverá entre <b>R3-R5</b> y quiere asumir ese riesgo, puede aplicar en <b>R3</b> y probablemente tendrá mejor respuesta (aunque no estadísticamente significativa) que en <b>R5</b> si es que ellas lluvias pronosticadas finalmente ocurren dentro de los 15 días aproximadamente. Sin embargo, si se aplicara en <b>R3</b> y no lloviera lo suficiente (al menos 50 mm acumulativamente en los 15 días posteriores a esa aplicación), esta pulverización probablemente fracase. Asimismo si llueve abundantemente desde <b>R3-R4</b> sin que llegue <b>R5</b> y el sistema le da la orientación, podrá asimismo adelantarse la aplicación antes de que llegue <b>R5</b>.",
+        pregunta: "Concentración de glucosa plasmática",
+        descripcion: "Catidad de glucosa presente en sangre, medido en mg/dL",
         respuestas : [
-            "Menos de 50 mm",
-            "50 mm o más",
+            "0 - 99,5",
+            "99,5 - 132,66",
+            "132,66 - 199"
         ]
     },
     {
-        pregunta: "Precipitación pluvial ocurrida",
-        descripcion: "Si el 75 % de la misma correspondió a lluvias de 7 mm o más Se fundamenta en que las lluvias que superan el umbral de 7 mm (excluyen lloviznas y lluvias ligeras) podrían asegurar una energía mínima para producir dispersión horizontal y vertical de esporas, muy requerido por los picnidios de <i>Septoria glycines</i>, <i>Phomopsis sojae</i>, y también para asegurar el mojado para la infección de conidios de <i>Cercospora kikuchii</i>.",
+        pregunta: "Presión arterial diastólica",
+        descripcion: "Presión más baja medida en las arterias; se produce cuando el músculo cardíaco está relajado entre latidos. Medida en  mmHg",
         respuestas : [
-            "Menos de 50 mm",
-            "Entre 50 y 100 mm",
-            "Entre 100 y 150 mm",
-            "Entre 150 y 200 mm",
-            "Más de 200 mm"
+            "0 - 67,77",
+            "67,77 - 81,33",
+            "81,33 - 122"
         ]
     },
     {
-        pregunta: "Rotación de cultivos",
-        descripcion: "Historia agronómica del lote con especies no hospedantes de patógenos de soja. Bajo rotación habrá menos fuente de inóculo.",
+        pregunta: "Espesor del pliegue cutáneo del tríceps",
+        descripcion: "El espesor del doble pliegue de piel y tejido adiposo subcutáneo comprimido en la parte posterior del tríceps, medido en mm",
         respuestas : [
-            "Se sembró soja en la siembra anterior",
-            "Se sembró trigo, maíz o sorgo en la siembra anterior "
+            "0 - 16,5",
+            "16,5 - 33 ",
+            "33 - 99 "
         ]
     },
     {
-        pregunta: "Sistema de labranza",
-        descripcion: "Las <b>EFC</b> son en causadas en su mayoría por agentes necrotróficos que sobreviven en rastrojo, de allí su valoración.",
+        pregunta: "Índice de masa corporal",
+        descripcion: "Es una medida de asociación entre la masa y la talla de un individuo",
         respuestas : [
-            "Labranza cero o siembra directa",
-            "Otro sistema distinto a labranza cero"
+            "0 - 28,75",
+            "28,75 - 38,34",
+            "38,34 o más"
         ]
     },
     {
-        pregunta: "Presencia de EFC en el cultivo de soja del año anterior (rastrojo)",
-        descripcion: "Es conveniente conocer los antecedentes sanitarios del lote si es que proviene de soja e ira nuevamente a soja. Es una forma indirecta de estimar la fuente de inóculo proveniente del rastrojo anterior. Se espera que si existieron síntomas el año anterior sus agentes causales estén sobreviviendo en los rastrojos presentes en el mismo lote.",
+        pregunta: "Función pedigree diabetes",
+        descripcion: "",
         respuestas : [
             "Hubo siembra en el año anterior y hubo presencia de EFC",
             "Hubo siembra en el año anterior y no hubo presencia de EFC",
@@ -44,49 +45,21 @@ var preguntas = [
         ]
     },
     {
-        pregunta: "Calidad sanitaria de la semilla",
-        descripcion: "Se considera los patógenos asociados a la semilla y transmitidos a la plántula; en áreas bajo rotación de cultivos. Si no se hace tratamiento de semilla la probabilidad de introducir o aumentar los patógenos causantes de <b>EFC</b> es mayor.",
+        pregunta: "Edad",
+        descripcion: "",
         respuestas : [
-            "Presencia de 1 o 2 agentes patógenos",
-            "Presencia de 3 o más agentes patógenos",
-            "No se ha realizado análisis de calidad sanitaria o se desconoce la misma"
+            "26 o menos",
+            "27 - 38",
+            "39 - 55",
+            "56 - 81"
         ]
     },
     {
-        pregunta: "Ciclo del cultivar",
-        descripcion: "Cuanto más largo sea el ciclo, mayor su probabilidad para enfermarse",
+        pregunta: "Cantidad de embarazos",
+        descripcion: "",
         respuestas : [
-            "Duración de menos de 6 meses",
-            "Duración de 6 meses",
-            "Duración de 7 meses",
-            "Duración de 8 meses",
-            "Duración de más de 8 meses"
-        ]
-    },
-    {
-        pregunta : "Producción destinada a semilla (destino de la producción)",
-        descripcion: "Si el lote es destinado a semilla, su manejo debe jerarquizarse en miras del control químico Esta práctica merece decisiones técnicas que tiendan a mejorar la calidad sanitaria de la semilla a cosechar.",
-        respuestas : [
-            "Producción destinada a semilla",
-            "Producción destinada a consumo humano"
-        ]
-    },
-    {
-        pregunta : "Potencial productivo del lote",
-        descripcion: "Tomar como base la productividad media del productor en años sin adversidades climáticas u otro factor anormal.",
-        respuestas : [
-            "Bajo",
-            "Moderado",
-            "Alto"
-        ]
-    },
-    {
-        pregunta: "Presencia actual de síntomas en el lote",
-        descripcion: "Considerar este item al momento de la calificación. Algunas veces pueden observarse síntomas de <i>Septoria glycines</i>, <i>Colletotrichum truncatum</i> (mancha marrón, antracnosisi) o <i>Cercospora kikuchii</i> (tizón morado) más tempranamente que pre-anuncian la presencia epidemiológica de las <b>EFC</b>. Para ello es necesario reconocer durante el monitoreo algunos síntomas característicos de las enfermedades causadas por estos patógenos. La <b>EFC</b> que puede manifestar síntomas más tempranamente, aún en etapas vegetativas es la mancha marrón causada por <i>Septoria glycines</i> es probable encontrar folíolos con pequeñas lesiones necróticas (marrones) rodeadas por un halo clorótico, en el tercio inferior de las plantas. Posteriormente las hojas amarillean y caen, observándose una típica defoliación basal. Para confirmar tempranamente la presencia de antracnosis es importante detectar necrosis en la nervadura en el envés de la hoja, o visualizar pecíolos de folíolos necrosados, a partir de floración en adelante. Finalmente y para el caso de <i>Cercospora kikuchii</i> es también posible detectar su temprana presencia al observar manchas violáceas o púrpuras en foliolos del tercio medio y superior de las plantas o en los pecíolos de sus foliolos principalmente en plantas donde reciban mas intensa y directamente la radiación solar (por Ej. borduras).",
-        respuestas : [
-            "No hay síntomas en el lote",
-            "Hay síntomas de 1 o 2 agentes patógenos",
-            "Hay síntomas de 3 o más agentes patógenos"
+            "0 - 3",
+            "3 o más"
         ]
     }
 ];
