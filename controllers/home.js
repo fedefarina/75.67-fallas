@@ -3,7 +3,6 @@ var _ = require('lodash');
 module.exports = function (app, log) {
   var Pregunta = require("../models/modelo");
   var TestModel = require("../models/modelo").TestModel;
-  var preguntasCount = require("../models/modelo").preguntasCount;
   var Preguntas = require("../models/modelo").Preguntas;
   var Resultados = require("../models/modelo").Resultados;
   var nools = require("nools");
@@ -62,30 +61,43 @@ module.exports = function (app, log) {
 
   app.get('/resultado', function (req, res) {
 
-    var flow = nools.flow("Diagnosis", function (flow) {
-
-      this.rule("R0", [Object, "r", "r.plas == 'plas2'"], function (facts) {
-        console.log("Match!");
-        console.log(facts);
-      });
-
+    var flow = nools.compile("flow/rules.nools", {
+      scope: {
+        logger: log
+      }
     });
 
-    var rulesFired = [];
+    var Result = flow.getDefined("result");
 
-    var session = flow.getSession();
-    session.assert(req.session.test.optionsSelected);
+    var negativeRules = [];
+    var positiveRules = [];
 
-    //now fire the rules
-    session.on("fire", function (ruleName) {
-      rulesFired.push(ruleName);
-    })
-    .match(function () {
-      console.log(rulesFired);
+    var result = req.session.test.optionsSelected
+
+    var session = flow.getSession(new Result({
+      plas: result.plas,
+      pres: result.pres,
+      skin: result.skin,
+      mass: result.mass,
+      pedi: result.pedi,
+      age: result.age,
+      preg: result.preg
+    }));
+
+    session.on("DIABSI", function (rule) {
+      positiveRules.push(rule);
+    });
+
+    session.on("DIABNO", function (rule) {
+      negativeRules.push(rule);
+    });
+
+    session.match(function () {
+      console.log(positiveRules);
 
       var resultado;
 
-      if (rulesFired.length == 0) {
+      if (positiveRules.length == 0) {
         resultado = Resultados[0];
       } else {
         resultado = Resultados[1];
