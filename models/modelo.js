@@ -37,16 +37,16 @@ var preguntas = [
     },
     {
         pregunta: "Función pedigree diabetes",
-        descripcion: "",
+        descripcion: "Una función que representa la probabilidad que existe para tener la enfermedad mediante la extrapolación de la historia de sus antepasados",
         respuestas : [
-            "Hubo siembra en el año anterior y hubo presencia de EFC",
-            "Hubo siembra en el año anterior y no hubo presencia de EFC",
-            "No hubo siembra de soja en el año anterior"
+            "0,078 - 0,468",
+            "0,468 - 0,859",
+            "0,859 - 2,42"
         ]
     },
     {
         pregunta: "Edad",
-        descripcion: "",
+        descripcion: "Edad del paciente",
         respuestas : [
             "26 o menos",
             "27 - 38",

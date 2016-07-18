@@ -15,4 +15,4 @@ EXPOSE 8080
 CMD [ "npm", "start" ]
 
 # docker build -t fextramiana/node-web-app .
-# docker run -p 49160:8080 -d fextramiana/node-web-app
+# docker run --name fallas -p 49160:8080 -d fextramiana/node-web-app
