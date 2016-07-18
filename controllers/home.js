@@ -6,12 +6,21 @@ module.exports = function (app, log) {
   var Preguntas = require("../models/modelo").Preguntas;
   var Resultados = require("../models/modelo").Resultados;
   var nools = require("nools");
-  var flow = nools.compile("flow/basic.nools", {
+  var questionFlow = nools.compile("flow/basic.nools", {
     scope: {
       logger: log
     }
   });
-  var Question = flow.getDefined("question");
+  var Question = questionFlow.getDefined("question");
+
+
+  var resultsFlow = nools.compile("flow/rules.nools", {
+    scope: {
+      logger: log
+    }
+  });
+
+  var Result = resultsFlow.getDefined("result");
 
   app.get('/', function (req, res) {
     res.render('home/home', {
@@ -61,27 +70,19 @@ module.exports = function (app, log) {
 
   app.get('/resultado', function (req, res) {
 
-    var flow = nools.compile("flow/rules.nools", {
-      scope: {
-        logger: log
-      }
-    });
-
-    var Result = flow.getDefined("result");
-
     var negativeRules = [];
     var positiveRules = [];
 
-    var result = req.session.test.optionsSelected
+    var questionsResult = req.session.test.optionsSelected
 
-    var session = flow.getSession(new Result({
-      plas: result.plas,
-      pres: result.pres,
-      skin: result.skin,
-      mass: result.mass,
-      pedi: result.pedi,
-      age: result.age,
-      preg: result.preg
+    var session = resultsFlow.getSession(new Result({
+      plas: questionsResult.plas,
+      pres: questionsResult.pres,
+      skin: questionsResult.skin,
+      mass: questionsResult.mass,
+      pedi: questionsResult.pedi,
+      age: questionsResult.age,
+      preg: questionsResult.preg
     }));
 
     session.on("DIABSI", function (rule) {
@@ -93,8 +94,6 @@ module.exports = function (app, log) {
     });
 
     session.match(function () {
-      console.log(positiveRules);
-
       var resultado;
 
       if (positiveRules.length == 0) {
@@ -116,7 +115,7 @@ module.exports = function (app, log) {
     currTest.preguntas[pregunta.id] = pregunta;
     currTest.optionsSelected = currTest.optionsSelected || {};
 
-    session = flow.getSession(new Question({
+    session = questionFlow.getSession(new Question({
       id: pregunta.id,
       ans: pregunta.respuesta
     }));
